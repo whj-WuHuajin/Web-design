@@ -1,0 +1,857 @@
+/* 图片选择制作 */
+
+/* 背景颜色 */
+body{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+.slidershow{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+.middle{
+    position: absolute;
+    /* 图片滑动高低设置 */
+    top: 160%;
+    /* 左右 */
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.bar:hover{
+    background: #fff;
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+.zhizuo{
+    color: red;
+    width: 150px;
+    height: 0px;
+    font-size: 50px;
+    /* text-align: center; */
+    /* position: absolute; */
+    margin: 15px 50px 20px 410px;
+    font-family: 华文新魏;
+}
+
+
+.logo {
+    color: red;
+    width: 200px;
+    height: 0px;
+    font-size: 40px;
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    font-family: 华文行楷;
+    font-style: italic;
+}
+
+
+.zhiyin{
+    position: absolute;
+    top: 800px;
+    left: 600px;
+    font-size: 35px;
+    font-family: 华文行楷;
+    font-style: italic;
+    color: red;
+}
+
+/* .aboutus{
+    color: black;
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    /* right: 30px; */
+    /* top: 100px; */
+    /* text-align: center; */
+    /* float: right;
+    font-family: 华文行楷;
+    font-style: italic; */
+    /* display: inline-block; */
+/* } */
+/* 
+.callus {
+    color: black;
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    right: 50px;
+    top: 5px;
+    font-family: 华文行楷;
+    font-style: italic;
+    display: inline-block;
+}
+
+.homepapg {
+    color: black;
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    right: 210px;
+    top: 5px;
+    font-family: 华文行楷;
+    font-style: italic;
+    display: inline-block;
+} */ 
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1100px;
+    overflow: hidden;
+    padding: 10px 20px;
+}
+
+
+/* .text-primary{
+    color: #ffa500;
+} */
+
+.bg-dark{
+    background: #444;
+    color: #fff;
+}
+
+#navbar{
+    background: #333;
+    color: #fff;
+    overflow: auto;
+    /* width:1500px; */
+    /* overflow: hidden; */
+}
+
+#navbar a{
+    color: #fff;
+}
+
+#navbar ul{
+    float: right;
+    list-style: none;
+}
+
+#navbar ul li{
+    float: left;
+}
+
+#navbar ul li a{
+    /* 转成块级元素 */
+    display: block;
+
+    /* 内边距   */
+    padding: 20px;
+    /* padding: 20px 200px 20px 20px; */
+
+    /* 水平居中 */
+    text-align: center;
+
+    /* 字体 */
+    font-family: 华文行楷;
+
+    /* 字体大小 */
+    font-size: 20px;
+
+    /* 外边距位置调整 上 右 下 左 */
+    margin: -20px 5px 10px 10px;   
+
+    /* 字体表面色 */
+    /* color: red; */
+}
+
+#navbar ul li a:hover,
+/* 底色常亮 */
+#navbar ul li a.current{
+    background: #444;
+    /* 字体底色 */
+    color: #ffa500;
+}
+
+/* showcase */
+#showcase{
+    background: url(../tp/风景2.jpg) no-repeat center center/cover;
+    width: 1519px;
+    height: 1500px;
+}
+#showcase .showcase-content{
+    color: #fff;
+    text-align: center;
+    padding-top: 300px;
+}
+#showcase .showcase-content h1{
+    font-size: 60px;
+    line-height: 1.2em;
+    color: purple;
+    font-family: 华文隶书;
+}
+#showcase .showcase-content p{
+    font-size: 30px;
+    line-height: 1.7em;
+    padding-bottom: 20px;
+    color: red;
+    font-family: 华文行楷;
+}
+
+
+#showcase a:hover,a{
+    color: red;
+}
+
+/* 先给个伪类选择器 */
+/* #showcase ul a:hover, */
+.btn{
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    background: #333;
+    padding: 13px 20px;
+    font-family: 华文行楷;
+    /* 去除边框 */
+    border: none;
+
+}
+.btn:hover{
+    background: #f7c08a;
+    /* background: black; */
+    color: red;
+}
+
+
+/* .btn-light{
+    background: red; 
+    color: #333;
+}   */
+
+ 
+
+/* 杰哥 */
+#home-info{
+    height: 400px;
+}
+#home-info .info-img{
+    /* 左浮动 */
+    float: left;
+    width: 40%;
+    background: url(../tp/杰哥.jpg)  no-repeat center center/cover;
+    height: 100%;
+    /* top: 1150px; */
+    /* position: absolute; */
+    
+}
+#home-info .info-content{
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    /* 上下 左右 */
+    padding: 50px 30px;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+}
+/* 杰哥模板调整 */
+#home-info .info-content p{
+    /* 内部大小扩展 */
+    padding-bottom: 30px;
+}
+#home-info .info-content a{
+    /* 内部大小扩展 */
+    top: 1710px;
+    left: 925px;
+    /* position: absolute; */
+}
+#home-info .info-content a:hover,a{
+    color: red;
+}
+
+
+/* 三哥 */
+#home-info-2{
+    height: 400px;
+}
+#home-info-2 .info-img-2{
+    /* 左浮动 */
+    float: left;
+    width: 40%;
+    background: url(../tp/三哥美食.jpg)  no-repeat center center/cover;
+    height: 100%;
+    /* top: 1150px; */
+    /* position: absolute; */
+    
+}
+#home-info-2 .info-content-2{
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    /* 上下 左右 */
+    padding: 50px 30px;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+}
+/* 三哥模板调整 */
+#home-info-2 .info-content-2 p{
+    /* 内部大小扩展 */
+    padding-bottom: 30px;
+}
+#home-info-2 .info-content-2 a{
+    /* 按钮移动 */
+    top: 2150px;
+    left: 925px;
+    /* position: absolute; */
+}
+#home-info-2 .info-content-2 a:hover,a{
+    color: red;
+}
+
+
+/* 蛇姐 */
+#home-info-3{
+    height: 400px;
+}
+#home-info-3 .info-img-3{
+    /* 左浮动 */
+    float: left;
+    width: 40%;
+    background: url(../tp/蛇1.jpg)  no-repeat center center/cover;
+    height: 100%;
+    /* top: 1150px; */
+    /* position: absolute; */
+    
+}
+#home-info-3 .info-content-3{
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    /* 上下 左右 */
+    padding: 50px 30px;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+}
+/* 蛇姐模板调整 */
+#home-info-3 .info-content-3 p{
+    /* 内部大小扩展 */
+    padding-bottom: 30px;
+}
+#home-info-3 .info-content-3 a{
+    /* 按钮移动 */
+    top: 2550px;
+    left: 925px;
+    /* position: absolute; */
+}
+#home-info-3 .info-content-3 a:hover,a{
+    color: red;
+}
+
+
+/* Faker */
+#home-info-4{
+    height: 400px;
+}
+#home-info-4 .info-img-4{
+    /* 左浮动 */
+    float: left;
+    width: 40%;
+    background: url(../tp/Faker.jpg)  no-repeat center center/cover;
+    height: 100%;
+}
+#home-info-4 .info-content-4{
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    /* 上下 左右 */
+    padding: 50px 30px;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+}
+/* Faker模板调整 */
+#home-info-4 .info-content-4 p{
+    /* 内部大小扩展 */
+    padding-bottom: 30px;
+}
+#home-info-4 .info-content-4 a{
+    /* 按钮移动 */
+    top: 2950px;
+    left: 925px;
+    /* position: absolute; */
+}
+#home-info-4 .info-content-4 a:hover,a{
+    color: red;
+}
+
+
+/* ikun */
+#home-info-5{
+    height: 400px;
+}
+#home-info-5 .info-img-5{
+    /* 左浮动 */
+    float: left;
+    width: 40%;
+    background: url(../tp/kun3.jpg)  no-repeat center center/cover;
+    height: 100%;
+}
+#home-info-5 .info-content-5{
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    /* 上下 左右 */
+    padding: 50px 30px;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+}
+/* kun模板调整 */
+#home-info-5 .info-content-5 p{
+    /* 内部大小扩展 */
+    padding-bottom: 30px;
+}
+#home-info-5 .info-content-5 a{
+    /* 按钮移动 */
+    top: 3350px;
+    left: 925px;
+    /* position: absolute; */
+}
+#home-info-5 .info-content-5 a:hover,a{
+    color: red;
+}
+
+
+/* features */
+#features h1{
+    text-align: center;
+    padding: 30px;
+    color: red;
+    background: #333;
+    font-style: italic;
+    /* font-size: 25px; */
+}
+.belowbox{
+    /* 左浮动 */
+    float: left;
+    width:33.3%;
+    /* height: 300px; */
+    padding: 50px;
+    /* 文本居中 */
+    text-align: center;
+}
+
+.belowbox i{
+    margin-bottom: 10px;
+}
+
+.bg-light{
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-primary{
+    background: #f7c08a;
+    color: #333;
+}
+
+/* contact-form */
+#contact-form .form-group{
+    margin-bottom: 20px;
+}
+#contact-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+#contact-form input,
+#contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    /* 边框厚度和颜色 */
+    border: 1px solid #ddd;
+    /* border-radius: 5px; */
+    /* 透明度 数字越小透明度越高*/
+    opacity: 0.5;
+    font-weight:bold;
+    /* color: black; */
+}
+#contact-form textarea{
+    height: 200px;
+}
+#contact-form input:focus,
+#contact-form textarea:focus{
+    /* 边框颜色 */
+    border-color: #f7c08a;
+    /* 自带边框 */
+    outline: none;
+}
+
+
+/* call的背景图 */
+#contact-form{
+    height: 1000px;
+    background: url(../tp/风景3.jpg)  no-repeat center center/cover;
+}
+
+/* register背景图 */
+#registerbackground{
+    height: 1000px;
+    background: url(../tp/风景4.jpg)  no-repeat center center/cover;
+}
+
+
+
+
+
+
+/* 灯笼制作 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    position: fixed;
+    /* 灯笼高低调整 */
+    top: 135px;
+
+    /* 灯笼左右调整 */
+    left: 100px;
+    /* 固定灯笼位置 */
+    position: absolute;
+}
+
+.box .light {
+    animation: dong-light 3s infinite linear;
+}
+
+.box .light .line{
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: red;
+}
+
+.box .light .light-a {
+    width: 150px;
+    height: 120px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 5px 5px 70px 5px rgba(255, 0, 0, 2);
+}
+
+.box .light .light-a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    border-radius: 50% 50% 0 0;
+    background: linear-gradient(to right,#dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03);
+    z-index: 3;
+}
+
+.box .light .light-a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    border-radius: 0 0 50% 50% ;
+    background: linear-gradient(to right,#dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03);
+    z-index: 3;
+}
+
+/* 内部线条 */
+.box .light .light-b {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 3px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ffa500;
+}
+
+.box .light .light-c {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ffa500;
+    /* 文字水平居中 */
+    text-align: center;
+    /* 文字垂直居中 */
+    line-height: 120px;
+    font-size: 60px;
+    font-family: '华文行楷';
+    color: #ffa500;
+}
+
+
+.box .light .ear-a {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 20px;
+    background-color: #ffa500;
+    animation: dong-ear 3s infinite linear;
+}
+
+.box .light .ear-b {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 2;
+}
+
+
+.box .light .ear-c {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 40px;
+    border-radius: 10px 10px 0 10px;
+    background-color: #ffa500;
+}
+
+@keyframes dong-light {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes dong-ear {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+
+
+/* 灯笼制作 */
+
+
+
+.box1 {
+    position: fixed;
+    top: 135px;
+    right: 100px;
+    position: absolute;
+}
+
+.box1 .light1 {
+    animation: dong-light1 3s infinite linear;
+}
+
+.box1 .light1 .line-a{
+    position: absolute;
+    right: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: red;
+}
+
+.box1 .light1 .light-d {
+    width: 150px;
+    height: 120px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 5px 5px 70px 5px rgba(255, 0, 0, 2);
+}
+
+.box1 .light1 .light-d::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    border-radius: 50% 50% 0 0;
+    background: linear-gradient(to right,#dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03);
+    z-index: 3;
+}
+
+.box1 .light1 .light-d::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    border-radius: 0 0 50% 50% ;
+    background: linear-gradient(to right,#dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03);
+    z-index: 3;
+}
+
+.box1 .light1 .light-e {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 3px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ffa500;
+}
+
+.box1 .light1 .light-f {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ffa500;
+    text-align: center;
+    line-height: 120px;
+    font-size: 60px;
+    font-family: '华文行楷';
+    color: #ffa500;
+}
+
+
+.box1 .light1 .ear-a {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 20px;
+    background-color: #ffa500;
+    animation: dong-ear 3s infinite linear;
+}
+
+.box1 .light1 .ear-b {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 2;
+}
+
+
+.box1 .light1 .ear-c {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 40px;
+    border-radius: 10px 10px 0 10px;
+    background-color: #ffa500;
+}
+
+@keyframes dong-light1 {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes dong-ear {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}

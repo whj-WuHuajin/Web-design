@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+    <style>
+
+        /* 给提交按钮添加一个颜色 */
+        input[type="submit"]{
+            /* 背景色 */
+            background-color: purple;
+            /* 字的颜色 */
+            color: white;
+        }
+        /* #da{
+            width: 200px;
+            height: 30px;
+        } */
+        #move{
+            position: absolute;
+            top: 200px;
+            left: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 制作一个注册页面 -->
+    <section id="registerbackground">
+        <form action="doRegister.php" method="post" id="move">
+            <table>
+                <tr>
+                    <td>用户名</td>
+                    <td><input type="text" name="username" id="da"></td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td><input type="password" name="password" id=""></td>
+                </tr>
+                <tr>
+                    <td>确认密码</td>
+                    <td><input type="password" name="confirm" id=""></td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="注册" ></td>
+                    <td><input type="reset" value="重置"></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+</body>
+</html>

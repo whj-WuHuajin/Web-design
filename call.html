@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+    <style>
+        .logo1 {
+            color: red;
+            width: 200px;
+            height: 0px;
+            font-size: 40px;
+            position: absolute;
+            left: 50px;
+            top: 20px;
+            font-family: 华文行楷;
+            font-style: italic;
+            margin: -10px 50px 20px -20px;
+        }
+
+        span {
+            color: red;
+        }
+        h1{
+            color: red
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <div class="logo1"><a href="小制作1.html"> <span>小吴制作</span> </a></div>
+
+                <!-- <p class="zhizuo">小制作</p> -->
+
+                <ul>
+                    <li><a href="小制作1.html" target="_blank">首页</a></li>
+                    <li><a href="aboutus.html" target="_blank">关于我们</a></li>
+                    <li><a href="call.html" target="_blank" class="current">联系我们</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <section id="contact-form" class="py">
+            <h1>联系我们</h1>
+            <p>如有疑问请填写以下信息联系我们!</p>
+            <br>
+            <form action="process.php">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" name="name" id="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="text" name="email" id="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">反馈内容</label>
+                    <textarea type="text" name="message" id="message"></textarea>
+                </div>
+
+                <button type="submit" class="btn">提交</button>
+                <h1>如果你还未注册账号，请先注册</h1>
+                <a href="register.html" target="_blank" class="btn">注册</a>
+            </form>
+        </section>
+
+        <section id="features">
+            <div class="threelian">
+                <h1>
+                    <i class="fa fa-solid fa-arrow-down fa-1x" style="color: red;"></i>
+                    一键三连
+                    <i class="fa fa-solid fa-arrow-down fa-1x" style="color: red;"></i>
+                </h1>
+            </div>
+             
+    
+            <div class="belowbox bg-light">
+                <i class="fa fa-solid fa-thumbs-up fa-3x" style="color: #e958cf;"></i>
+                <h3>点赞</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, eligendi?</p>
+            </div>
+    
+            <div class="belowbox bg-primary">
+                <i class="fa fa-solid fa-star fa-3x" style="color: yellow;"></i>
+                <h3>关注</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, eligendi?</p>
+            </div>
+            
+            <div class="belowbox bg-light">
+                <i class="fa fa-solid fa-heart fa-3x"  style="color: #e62b0a;"></i>
+                <h3>小爱心</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, eligendi?</p>
+            </div>
+    
+    
+    
+        </section> 
+    </header>
+</body>
+
+</html>
